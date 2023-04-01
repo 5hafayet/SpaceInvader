@@ -6,20 +6,23 @@ pygame.init()
 
 # Title and Icon
 pygame.display.set_caption("SpaceInvader")
-icon = pygame.image.load('Icons/ufo.png')
+icon = pygame.image.load('Img/ufo.png')
 pygame.display.set_icon(icon)
 
 # create the screen
 screen = pygame.display.set_mode((800, 600))
 
+# Background
+background = pygame.image.load("Img/background.png")
+
 # Player
-playerImg = pygame.image.load('Icons/player_ufo.png')
+playerImg = pygame.image.load('Img/player_ufo.png')
 playerX = 370
 playerY = 480
 playerX_change = 0
 
 # Enemy
-enemyImg = pygame.image.load('Icons/enemy.png')
+enemyImg = pygame.image.load('Img/enemy.png')
 enemyX = random.randint(0, 800)
 enemyY = random.randint(50, 150)
 enemyX_change = 0.3
@@ -38,6 +41,7 @@ def enemy(x, y):
 running = True
 while running:
     screen.fill((0, 0, 0))
+    screen.blit(background,(0, 0))
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
             running = False
