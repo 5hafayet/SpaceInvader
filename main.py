@@ -57,9 +57,9 @@ while running:
         # player position change based on key pressed
         if event.type == pygame.KEYDOWN:
             if event.key == pygame.K_LEFT:
-                playerX_change = -0.3
+                playerX_change = -0.6
             if event.key == pygame.K_RIGHT:
-                playerX_change = 0.3
+                playerX_change = 0.6
         if event.type == pygame.KEYUP:
             if event.key == pygame.K_LEFT or event.key == pygame.K_RIGHT:
                 playerX_change = 0
