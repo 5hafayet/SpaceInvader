@@ -1,5 +1,4 @@
 
-```
 # SpaceInvader Game
 
 A classic arcade game implemented using Python and Pygame.
